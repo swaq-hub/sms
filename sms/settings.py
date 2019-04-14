@@ -29,7 +29,7 @@ SECRET_KEY = '$27jal9#6$mm)v8eiv)=ma(^43&3f(%w-0m#b*)m@yb&9ytb@t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['waq-sms-hub.herokuapp.com']
 
 
 # Application definition
