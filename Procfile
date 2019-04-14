@@ -1,1 +1,1 @@
-web: gunicorn manage:main
+web: gunicorn sms.wsgi --log-file -
