@@ -23,6 +23,7 @@ from . import views
 
 urlpatterns = [
     path('', views.home),
+    path('authenticateuser',views.authenticateusers)
     
 ]
 
