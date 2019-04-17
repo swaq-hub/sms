@@ -18,6 +18,7 @@ urlpatterns = [
     url(r'^admission/list$', views.admissionform_list, name="admission-list"),
     url(r'^attendance$', views.attendanceview, name="attendance"),
     url(r'^profile/(?P<id>\d+)/$', views.showstudentprofile, name="student-profile")
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
+# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
