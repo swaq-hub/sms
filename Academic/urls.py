@@ -19,7 +19,8 @@ urlpatterns = [
                   url(r'^subjects/add$', views.subjectsaddoredit, name="subjects-add"),
                   url(r'^subjects/edit/(?P<id>\d+)/$', views.subjectsaddoredit, name="subjects-edit"),
                   url(r'^subjects/list$', views.subjects_list, name="subjects-list"),
-              ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+              ]
+              # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
