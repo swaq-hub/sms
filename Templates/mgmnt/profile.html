@@ -1,0 +1,143 @@
+{% extends "../blank.html" %}
+{% load static %}
+{% block mainbody %}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3 class="header smaller lighter blue">User Profile</h3>
+
+        </div>
+    <div id="user-profile-1" class="user-profile row">
+        <div class="col-xs-12 col-sm-3 center">
+            <div>
+												<span class="profile-picture">
+													<img id="avatar" class="editable img-responsive" alt="Alex's Avatar" src="{{ user.userextension.image.url }}" />
+												</span>
+
+                <div class="space-4"></div>
+
+                <div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
+                    <div class="inline position-relative">
+                        <a href="#" class="user-title-label dropdown-toggle" data-toggle="dropdown">
+                            <i class="ace-icon fa fa-circle light-green"></i>
+                            &nbsp;
+                            <span class="white">{{user.first_name}} {{user.last_name}}</span>
+                        </a>
+
+                        <ul class="align-left dropdown-menu dropdown-caret dropdown-lighter">
+                            <li class="dropdown-header"> Change Status </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="ace-icon fa fa-circle green"></i>
+                                    &nbsp;
+                                    <span class="green">Available</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="ace-icon fa fa-circle red"></i>
+                                    &nbsp;
+                                    <span class="red">Busy</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="ace-icon fa fa-circle grey"></i>
+                                    &nbsp;
+                                    <span class="grey">Invisible</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-6"></div>
+
+            <div class="profile-contact-info">
+                <div class="profile-contact-links align-left">
+                    <a href="#" class="btn btn-link">
+                        <i class="ace-icon fa fa-envelope bigger-120 pink"></i>
+                        {{user.email}}
+                    </a>
+
+                    <a href="#" class="btn btn-link">
+                        <i class="ace-icon fa fa-globe bigger-125 blue"></i>
+                        {{user.userextension.website}}
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hr hr16 dotted"></div>
+        </div>
+
+        <div class="col-xs-12 col-sm-9">
+
+            <div class="space-20"></div>
+
+            <div class="profile-user-info profile-user-info-striped">
+                <div class="profile-info-row">
+                    <div class="profile-info-name"> Username </div>
+
+                    <div class="profile-info-value">
+                        <span class="editable" id="username">{{user.username}}</span>
+                    </div>
+                </div>
+
+
+                <div class="profile-info-row">
+                    <div class="profile-info-name"> Location </div>
+
+                    <div class="profile-info-value">
+                        <i class="fa fa-map-marker light-orange bigger-110"></i>
+                        <span class="editable" id="city">{{user.userextension.city}}</span>
+                    </div>
+                </div>
+
+                <div class="profile-info-row">
+                    <div class="profile-info-name"> DoB </div>
+
+                    <div class="profile-info-value">
+                        <span class="editable" id="age">{{user.userextension.dob}}</span>
+                    </div>
+                </div>
+
+                <div class="profile-info-row">
+                    <div class="profile-info-name"> Joined </div>
+
+                    <div class="profile-info-value">
+                        <span class="editable" id="signup">{{user.date_joined}}</span>
+                    </div>
+                </div>
+
+                <div class="profile-info-row">
+                    <div class="profile-info-name"> Last Online </div>
+
+                    <div class="profile-info-value">
+                        <span class="editable" id="login">{{user.last_login}}</span>
+                    </div>
+                </div>
+
+                <div class="profile-info-row">
+                    <div class="profile-info-name"> About Me </div>
+
+                    <div class="profile-info-value">
+                        <span class="editable" id="about">{{user.userextension.description}}</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="space-20"></div>
+
+            <div class="hr hr2 hr-double"></div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
