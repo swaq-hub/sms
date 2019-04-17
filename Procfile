@@ -1,1 +1,1 @@
-web: gunicorn sms.wsgi --log-file -
+web: gunicorn schoolerp.wsgi --log-file -
