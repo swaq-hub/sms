@@ -26,7 +26,6 @@ urlpatterns = [
     url(r'^employee/', include('employee.urls')),
     url(r'^academic/', include('Academic.urls')),
     url(r'^', include('mgmnt.urls')),  # Last Line
-] 
-# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
